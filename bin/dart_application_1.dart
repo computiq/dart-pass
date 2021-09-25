@@ -16,6 +16,7 @@ class View {
     return '$id';
   }
 }
+
 class Text extends View {
   String content;
   Text(int id, this.content, {Color? color}) : super(id, color: color);
@@ -33,21 +34,21 @@ void main() {
 
   int id = Random().nextInt(10000);
 
-  Text helloText = Text(id, content: 'Hello' );
+  Text helloText = Text(id,"hello");
   print('hello: $helloText');
-  
+
   task2();
 }
 
 void task2() {
   List<int> numbers = List.generate(75, (index) => Random().nextInt(10000));
-  
+
   List evenNumbers = [];
 
   for (final i in numbers) {
     if (i.isEven) {
       evenNumbers.add(i);
-    } 
+    }
   }
   /*
     Separate even numbers from the above `numbers` list.
