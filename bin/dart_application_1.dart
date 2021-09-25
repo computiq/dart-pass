@@ -16,6 +16,14 @@ class View {
     return '$id';
   }
 }
+/* task 1*/
+class Text extends View { 
+
+    string content;
+
+    Text(int id, this.content, {Color? color}) : super(id, color: color);
+
+  };
 
 void main() {
   /*
@@ -28,6 +36,8 @@ void main() {
   */
 
   int id = Random().nextInt(10000);
+  /* task tow*/
+  var helloText = Text( id2,  'Hello' );
 
   print('hello: $helloText');
 }
