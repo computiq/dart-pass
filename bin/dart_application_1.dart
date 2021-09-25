@@ -16,10 +16,10 @@ class View {
     return '$id';
   }
 }
-class Text extends View{
+class Text extends View {
   String content;
   Text(int id, this.content, {Color? color}) : super(id, color: color);
-  }
+}
 
 void main() {
   /*
@@ -33,8 +33,10 @@ void main() {
 
   int id = Random().nextInt(10000);
 
-  var helloText = Text(<random id>, content: 'Hello' );
+  Text helloText = Text(id, content: 'Hello' );
   print('hello: $helloText');
+  
+  task2();
 }
 
 void task2() {
