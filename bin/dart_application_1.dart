@@ -33,7 +33,12 @@ void main() {
 void task2() {
   List<int> numbers = List.generate (75, (index) => Random().nextInt(10000));
 
-  List<int> evenNumbers = numbers.where((element) => element.isEven).toList();
+  List evenNumbers=[];
+  for(final i in numbers){
+    if (i.isEven){
+      evenNumbers.add(i);
+    }
+  }
 
   print('evenNumbers: $evenNumbers');
 }
