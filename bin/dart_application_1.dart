@@ -26,7 +26,18 @@ void main() {
     2) Create new `Text` object with the following:
       var helloText = Text(<random id>, content: 'Hello' )
   */
-
+class Text extends View {
+  String content;
+  Text(int id, this.content, {Color? color}) : super(id, color: color);
+}
+  
+  
+  int textId = Random().nextInt(10000);
+  Text helloText = Text(
+    textId,
+    'hello',
+  );
+  
   int id = Random().nextInt(10000);
 
   print('hello: $helloText');
@@ -39,5 +50,7 @@ void task2() {
     Separate even numbers from the above `numbers` list.
     List<int> evenNumbers = ...
   */
+    List<int> evenNumbers = numbers.where((e) => e % 2 == 0).toList();
+  
   print('evenNumbers: $evenNumbers');
 }
