@@ -32,7 +32,7 @@ void main() {
   int id = Random().nextInt(10000);
 var helloText = Text(id,'Hello');
   print('hello: $helloText');
-  
+  task2();
 }
 
 void task2() {
