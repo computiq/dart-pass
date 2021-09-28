@@ -17,6 +17,21 @@ class View {
   }
 }
 
+
+class Text extends View {
+  String? content;
+  Text(int id, {this.content, Color? color}) : super(id, color: color);
+
+// if you want to print content and color even if its null:
+/*  
+  @override
+  String toString() {
+    return '$id $content $color';
+  }
+*/
+}
+
+
 void main() {
   /*
     1) Create class named `Text` that extends/inherits `View` class,
@@ -28,16 +43,26 @@ void main() {
   */
 
   int id = Random().nextInt(10000);
-
+  var helloText = Text(id, content: "Hello");
   print('hello: $helloText');
+  /* the output will be the following (the id number will be random):
+  hello : 5384
+  */
+  task2();
 }
 
 void task2() {
   List<int> numbers = List.generate(75, (index) => Random().nextInt(10000));
-
-  /*
-    Separate even numbers from the above `numbers` list.
-    List<int> evenNumbers = ...
-  */
+  List evenNumbers = [];
+  
+   for (int i in numbers)
+  {
+    if (i %2 == 0)
+    evenNumbers.add(i);
+  }
   print('evenNumbers: $evenNumbers');
+  
+  /* the output will be the following:
+  evenNumbers: [List of even numbers]
+  */
 }
