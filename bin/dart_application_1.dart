@@ -45,6 +45,9 @@ void main() {
   int id = Random().nextInt(10000);
   var helloText = Text(id, content: "Hello");
   print('hello: $helloText');
+  /* the output will be the following (the id number will be random):
+  hello : 5384
+  */
   task2();
 }
 
@@ -57,10 +60,9 @@ void task2() {
     if (i %2 == 0)
     evenNumbers.add(i);
   }
-  
-  /*
-    Separate even numbers from the above `numbers` list.
-    List<int> evenNumbers = ...
-  */
   print('evenNumbers: $evenNumbers');
+  
+  /* the output will be the following:
+  evenNumbers: [List of even numbers]
+  */
 }
