@@ -31,8 +31,14 @@ void main() {
 
   int id = Random().nextInt(10000);
 var helloText = Text(id,'Hello');
+   
   print('hello: $helloText');
+  //this will output [hello: "number"]  number will be different after every run because it's random number
   task2();
+   /*
+  this will call the task2()
+ 
+  */
 }
 
 void task2() {
@@ -49,4 +55,8 @@ void task2() {
     
   }}
   print('evenNumbers: $evenNumbers');
+   /*
+   And this will print the even numbers from the list numbers like this
+   evenNumbers: [3358, 2752, 524, 2528, 736, 4464, 3546, 8026, 2732, 5556, 5042, 746, 1728, 7732, 7952, 2166, 4750, 420, 136, 3280, 6756, 6538, 3618, 6884, 9830, 1796, 618, 7304, 1566, 8920, 9736]
+  */
 }
